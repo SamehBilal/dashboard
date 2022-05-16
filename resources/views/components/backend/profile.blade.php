@@ -40,10 +40,15 @@
         </a>
 
         <!-- item-->
-        <a href="javascript:void(0);" class="dropdown-item notify-item">
-            <i class="mdi mdi-logout me-1"></i>
-            <span>Logout</span>
-        </a>
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <a  href="route('logout')"
+                onclick="event.preventDefault();
+                        this.closest('form').submit();" class="dropdown-item notify-item">
+                <i class="mdi mdi-logout me-1"></i>
+                <span>{{ __('Log Out') }}</span>
+            </a>
+        </form>
 
     </div>
 </li>

@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <!-- Begin page -->
         @include('components.backend.meta-tags')
 
-        <title>Analytics Dashboard | Dashboard</title>
+        <!-- Begin page -->
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <!-- Begin page -->
         @include('components.backend.default-styles')
 
+        <!-- Begin page -->
         @yield('extra_styles')
 
     </head>
 
     <body class="loading" data-layout="detached" data-layout-config='{"leftSidebarCondensed":false,"darkMode":true, "showRightSidebarOnStart": true}'>
 
-    @include('components.backend.top-bar')
+        <!-- Begin page -->
+        @include('components.backend.top-bar')
 
         <!-- Start Content-->
         <div class="container-fluid">
@@ -21,12 +26,16 @@
             <!-- Begin page -->
             <div class="wrapper">
 
-               @include('components.backend.main-drawer')
+                <!-- Begin page -->
+                @include('components.backend.main-drawer')
 
+                <!-- Begin page -->
                 <div class="content-page">
 
+                    <!-- Begin page -->
                     @yield('content')
 
+                    <!-- Begin page -->
                     @include('components.backend.footer')
 
                 </div> <!-- content-page -->
@@ -42,9 +51,10 @@
         <div class="rightbar-overlay"></div>
         <!-- /End-bar -->
 
-
+        <!-- Begin page -->
         @include('components.backend.default-scripts')
 
+        <!-- Begin page -->
         @yield('extra_script')
 
     </body>

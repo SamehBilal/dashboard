@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- Begin page -->
+        @include('components.backend.meta-tags')
 
+        <!-- Begin page -->
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <!-- Begin page -->
+        @include('components.backend.default-styles')
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <!-- Begin page -->
+        @yield('extra_styles')
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
-        </div>
+
+    <body class="loading authentication-bg" data-layout-config='{"darkMode":true}'>
+        {{ $slot }}
+
+        <footer class="footer footer-alt">
+            2018 - 2021 © Hyper - Coderthemes.com
+        </footer>
+
+         <!-- Begin page -->
+         @include('components.backend.default-scripts')
+
+         <!-- Begin page -->
+         @yield('extra_script')
+
     </body>
 </html>
