@@ -32,7 +32,11 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
                         <span class="logo-letter is-active">M</span>
                         <span class="logo-letter is-active">E</span>
                         <span class="logo-letter is-active">H</span>
-                      </div>
+					  </div>
+					  https://codepen.io/abdelrhmansaid/details/OJRNOpQ
+https://codepen.io/flavio_amaral/pen/xxgYGrR
+https://codepen.io/havardob/pen/JjJXqZm
+https://codepen.io/jkantner/pen/eYygqJm
                 </h1>
 				<nav class="frame__links">
 					<a href="http://tympanus.net/Development/CircularTextEffect/">Previous</a>
