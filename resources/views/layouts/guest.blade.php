@@ -5,7 +5,7 @@
         @include('components.backend.meta-tags')
 
         <!-- Begin page -->
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Sameh Bilal') }}</title>
 
         <!-- Begin page -->
         @include('components.backend.default-styles')
@@ -19,7 +19,7 @@
         {{ $slot }}
 
         <footer class="footer footer-alt">
-            2018 - 2021 © Hyper - Coderthemes.com
+            {{ date('Y') }} © Sameh Bilal
         </footer>
 
          <!-- Begin page -->
